@@ -181,6 +181,7 @@ public class HammerHead extends HttpServlet {
             String clientBrowser = "Not known!";
             if (userAgent != null) {
                 clientBrowser = userAgent;
+                userAgent = clientBrowser;
             }
             request.setAttribute("client.browser", clientBrowser);
             // removed - this is being done in updateSession call
